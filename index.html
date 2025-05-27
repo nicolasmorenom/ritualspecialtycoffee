@@ -3,70 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritual Specialty Coffee - Experience the Ritual</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Ritual Specialty Coffee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1200x600/343a40/ffffff?text=Ritual+Coffee+Background') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .section-title {
+            color: #6f4e37; /* Coffee brown */
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .btn-primary {
+            background-color: #6f4e37;
+            border-color: #6f4e37;
+            border-radius: 8px;
+            padding: 10px 25px;
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+        .btn-primary:hover {
+            background-color: #5a3e2e;
+            border-color: #5a3e2e;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .payment-method img {
+            max-height: 40px;
+            margin: 0 10px;
+        }
+        .rounded-image {
+            border-radius: 15px; /* Apply rounded corners to the image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Ritual Specialty Coffee</div>
-            <ul>
-                <li><a href="#product">Our Coffee</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ritual Specialty Coffee</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order">How to Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">Ritual Specialty Coffee</h1>
+            <p class="lead mb-5">Start your day with world-class Colombian coffee, a daily ritual.</p>
+            <a href="#order" class="btn btn-primary btn-lg">Order Now</a>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Elevate Your Morning Ritual</h1>
-                <p>Discover the rich, nuanced flavors of our ethically sourced, single-origin coffee.</p>
-                <a href="#product" class="btn">Shop Now</a>
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Our Story</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://placehold.co/600x400/6f4e37/ffffff?text=Coffee+Beans" class="img-fluid rounded-image" alt="Coffee Beans">
+                </div>
+                <div class="col-md-6">
+                    <p>My wife and I grew up in Colombia, where starting the day with world-class coffee was our daily ritual. Since moving here, we’ve missed that perfect cup. Every time we visit home, we bring bags back—and so many friends ask us to bring some for them, too.</p>
+                    <p>That’s why I’m starting Ritual Specialty Coffee. It's a project close to our hearts, bringing the authentic taste of Colombian coffee directly to you.</p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="product" class="product-section">
-            <div class="product-image-container">
-                <img src="WhatsApp Image 2025-05-25 at 3.23.28 PM.jpeg" alt="Ritual Specialty Coffee Bag" class="product-image">
+    <section id="product" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">About Our Coffee</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card p-4">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                <img src="ritualcoffeebag.jpeg" class="img-fluid rounded-image" alt="Ritual Coffee Bag">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center text-md-start">Ritual Specialty Coffee</h3>
+                                    <ul class="list-group list-group-flush mt-3">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <strong>SCA Rating:</strong>
+                                            <span>87 SCA-rated, premium specialty coffee</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <strong>Variety:</strong>
+                                            <span>Castillo variety from Valle del Cauca</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <strong>Altitude:</strong>
+                                            <span>Grown at 1,550–1,900m</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <strong>Weight:</strong>
+                                            <span>340g ground bags</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <strong>Price:</strong>
+                                            <span class="fw-bold">$20 USD per bag</span>
+                                        </li>
+                                    </ul>
+                                    <p class="card-text text-center text-md-start mt-4">
+                                        This is a small first batch—just 100 bags available. I’ll be delivering them this week!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="product-details">
-                <h2>Our Signature Ground Coffee</h2>
-                <h3>100% Colombian Coffee</h3>
-                <p class="description">Roasted whole bean, Castillo variety. Grown at altitudes of 1,800 to 1,900 meters above sea level. Trujillo, Valle del Cauca.</p>
-                <p class="weight">240g Bag</p>
-                <p class="price">USD 23</p>
-                <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-                <p class="coming-soon-note">More products coming soon!</p>
+        </div>
+    </section>
+
+    <section id="order" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">How to Order</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">Send $20 per bag via one of the following:</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center">
+                                    <img src="https://placehold.co/30x30/6f4e37/ffffff?text=V" alt="Venmo Icon" class="me-2 rounded-circle">
+                                    <strong>Venmo:</strong> <span class="ms-2">@nicolas-moreno-35</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <img src="https://placehold.co/30x30/6f4e37/ffffff?text=Z" alt="Zelle Icon" class="me-2 rounded-circle">
+                                    <strong>Zelle:</strong> <span class="ms-2">n.morenom@icloud.com</span>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center">
+                                    <img src="https://placehold.co/30x30/6f4e37/ffffff?text=C" alt="Cash Icon" class="me-2 rounded-circle">
+                                    <strong>Cash:</strong> <span class="ms-2"> (for local deliveries)</span>
+                                </li>
+                            </ul>
+                            <h4 class="card-title mt-4 mb-3">After Payment:</h4>
+                            <p>Fill out this form and attach proof of payment:</p>
+                            <a href="https://forms.gle/your-google-form-link-here" target="_blank" class="btn btn-primary">Go to Order Form</a>
+                            <small class="d-block mt-2 text-muted">Please replace "https://forms.gle/your-google-form-link-here" with your actual Google Form link.</small>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="about-section">
-            <h2>The Ritual Difference</h2>
-            <p>At Ritual Specialty Coffee, we believe that coffee is more than just a beverage – it's a moment, a pause, a daily ritual. We meticulously source the finest beans from sustainable farms, ensuring every cup delivers an unparalleled experience. Our commitment to quality, freshness, and ethical practices shines through in every roast. Join us in celebrating the art of coffee.</p>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <h2>Get in Touch</h2>
-            <p>Have questions or just want to say hello? We'd love to hear from you.</p>
-            <p>Email: <a href="mailto:info@ritualspecialtycoffee.com">info@ritualspecialtycoffee.com</a></p>
-            <p>Follow us on social media for updates!</p>
-            <div class="social-links">
-                <a href="#" target="_blank">Facebook</a> |
-                <a href="#" target="_blank">Instagram</a> |
-                <a href="#" target="_blank">Twitter</a>
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <p class="lead">Thanks so much for supporting this dream—I can't wait for you to try it!</p>
+                    <p class="mb-1">Warmly,</p>
+                    <h4 class="mb-3">Nicolas Moreno</h4>
+                    <p class="mb-0"><strong>Phone:</strong> <a href="tel:+12408798878" class="text-decoration-none text-dark">240-879-8878</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:n.morenom@icloud.com" class="text-decoration-none text-dark">n.morenom@icloud.com</a></p>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Ritual Specialty Coffee. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ritual Specialty Coffee. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eOzPHSlsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 </body>
 </html>
