@@ -1,0 +1,303 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #2c2c2c;
+}
+
+a {
+    color: #6a0572; /* A deep purple */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a020f0; /* Lighter purple on hover */
+}
+
+/* Header and Navigation */
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #2c2c2c;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-weight: 400;
+    color: #555;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #6a0572;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1510972527921-ce037664858b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    height: 70vh; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #6a0572;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a020f0;
+}
+
+/* Product Section */
+.product-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-top: -60px; /* Pulls it up over the hero */
+    position: relative;
+    z-index: 500;
+}
+
+.product-image-container {
+    flex: 1;
+    min-width: 300px; /* Minimum width for image container */
+    max-width: 500px;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.product-details {
+    flex: 1;
+    min-width: 300px; /* Minimum width for details container */
+    max-width: 600px;
+    text-align: left;
+}
+
+.product-details h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.product-details h3 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.product-details .description {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.product-details .weight {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.product-details .price {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #6a0572;
+    margin-bottom: 30px;
+}
+
+.add-to-cart-btn {
+    background-color: #6a0572;
+    color: #fff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #a020f0;
+}
+
+.coming-soon-note {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* About and Contact Sections */
+.about-section, .contact-section {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.about-section h2, .contact-section h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+}
+
+.about-section p, .contact-section p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-weight: 700;
+}
+
+/* Footer */
+footer {
+    background-color: #2c2c2c;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .product-section {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px; /* Adjust for smaller screens */
+        padding: 40px 20px;
+    }
+
+    .product-details {
+        margin-top: 30px;
+    }
+
+    .product-details h2 {
+        font-size: 2em;
+    }
+
+    .product-details .price {
+        font-size: 1.8em;
+    }
+
+    .about-section, .contact-section {
+        padding: 40px 20px;
+        margin: 20px auto;
+    }
+
+    .about-section h2, .contact-section h2 {
+        font-size: 2em;
+    }
+}
