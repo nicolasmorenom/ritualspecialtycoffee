@@ -190,7 +190,7 @@
                     Brewing Tips
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-ritual-gold transition-all duration-300 group-hover:w-full"></span>
                 </a></li>
-                <li><a href="#order" class="bg-ritual-accent-brown text-white px-6 py-2 rounded-full hover:bg-ritual-accent-darker transition-all duration-300 transform hover:scale-105 pulse-glow">Order Now</a></li>
+                <li><a href="#product" class="bg-ritual-accent-brown text-white px-6 py-2 rounded-full hover:bg-ritual-accent-darker transition-all duration-300 transform hover:scale-105 pulse-glow">Order Now</a></li>
             </ul>
 
             <!-- Mobile Menu Button -->
@@ -258,7 +258,7 @@
                         Our coffee is of the exquisite Castillo variety, grown in the nutrient-rich soils of Valle del Cauca, Colombia—one of the world's most celebrated coffee regions. Cultivated at elevations between 1,550 and 1,900 meters, these high-altitude beans develop complex, vibrant notes that reflect their origin.
                     </p>
                     
-                    <div class="grid grid-cols-2 gap-4 mb-8">
+                   <!-- <div class="grid grid-cols-2 gap-4 mb-8">
                         <div class="bg-gradient-to-br from-ritual-accent-brown to-ritual-gold p-4 rounded-xl text-gray-900 text-center">
                             <div class="text-2xl font-bold">87</div>
                             <div class="text-sm">SCA Rating</div>
@@ -267,10 +267,10 @@
                             <div class="text-2xl font-bold">1,550-1,900m</div>
                             <div class="text-sm">Altitude</div>
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="bg-gradient-to-r from-ritual-dark-brown to-ritual-medium-brown p-6 rounded-xl shadow-lg mb-6">
-                        <h3 class="text-xl font-semibold text-ritual-gold mb-3">What does an 87 SCA score mean?</h3>
+                        <h3 class="text-xl font-semibold text-ritual-gold mb-3">What does an SCA score mean?</h3>
                         <p class="text-gray-900 text-sm leading-relaxed">
                             The Specialty Coffee Association (SCA) scores coffee on a scale of 0–100. Only coffees that score 80 and above earn the "specialty" label. At 87, Ritual ranks among the top-tier beans globally—offering a refined flavor profile with clarity, sweetness, and balance that connoisseurs expect from exceptional coffee.
                         </p>
@@ -296,7 +296,7 @@
                 </div>
 
                 <div class="text-center mb-6">
-                    <h3 class="text-3xl font-bold text-ritual-gold mb-3 font-display">340g Bag (12 oz)</h3>
+                    <h3 class="text-3xl font-bold text-ritual-gold mb-3 font-display">340g Bag (12 oz) SCA 87</h3>
                     <p class="text-ritual-gray mb-4 text-lg">Perfect for 25–30 cups of exceptional coffee</p>
                     <div class="inline-block bg-ritual-accent-brown text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Ground Coffee
@@ -331,10 +331,20 @@
                 </div>
 
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-ritual-accent-brown mb-6">$18 USD</div>
+                    <div class="text-4xl font-bold text-ritual-accent-brown mb-6">$20 USD</div>
                     <a href="#order" class="block bg-gradient-to-r from-ritual-accent-brown to-ritual-gold text-black px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 pulse-glow font-semibold">
-                        Get Your Bag Now!
+                       <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1Rj50ED76isZx4fe5XVQyQQP"
+  publishable-key="pk_live_51Rj4a5D76isZx4feXi4Kr5iCVAbBTqcstXmYI7V507YXaFCUiodLpZ3UF2PoNvdzQ4XhaZ3JXI27x9LjpkWEJUjA0021IAybpG"
+>
+</stripe-buy-button>
                     </a>
+                    
+                  
                 </div>
             </div>
         </div>
@@ -373,7 +383,7 @@
         </div>
     </section>
 
-    <section id="order" class="bg-ritual-gradient py-20 relative overflow-hidden">
+    <!--<section id="order" class="bg-ritual-gradient py-20 relative overflow-hidden">
         <div class="floating-beans">
             <div class="bean"></div>
             <div class="bean"></div>
@@ -397,7 +407,8 @@
                 </a>
             </div>
         </div>
-    </section>
+    </section>-->
+    
 
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4 text-center">
