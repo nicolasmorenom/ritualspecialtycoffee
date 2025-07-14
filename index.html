@@ -11,37 +11,46 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
-            --ritual-dark-brown: #1a0f08;
-            --ritual-medium-brown: #2d1b13;
-            --ritual-light-creme: #faf8f5;
-            --ritual-accent-brown: #d4a574;
-            --ritual-text-gray: #4a5568;
-            --ritual-gold: #c9a96e;
+            --text-color: #333333;
+            --bg-primary: #385948;
+            --bg-secondary: #0F283C;
+            --bg-accent: #400505;
+            --white: #FFFFFF;
+            --light-gray: #F8F8F8;
         }
 
-        .bg-ritual-dark {
-            background: linear-gradient(135deg, var(--ritual-dark-brown) 0%, var(--ritual-medium-brown) 100%);
+        .bg-primary {
+            background-color: var(--bg-primary);
         }
-        .bg-ritual-gradient {
-            background: linear-gradient(135deg, #1a0f08 0%, #2d1b13 50%, #3d2817 100%);
+        .bg-secondary {
+            background-color: var(--bg-secondary);
         }
-        .text-ritual-light-creme {
-            color: var(--ritual-light-creme);
+        .bg-accent {
+            background-color: var(--bg-accent);
         }
-        .bg-ritual-accent-brown {
-            background-color: var(--ritual-accent-brown);
+        .text-primary {
+            color: var(--bg-primary);
         }
-        .hover\:bg-ritual-accent-darker:hover {
-            background-color: #b8935f;
+        .text-secondary {
+            color: var(--bg-secondary);
         }
-        .text-ritual-accent-brown {
-            color: var(--ritual-accent-brown);
+        .text-accent {
+            color: var(--bg-accent);
         }
-        .text-ritual-gray {
-            color: var(--ritual-text-gray);
+        .text-white {
+            color: var(--white);
         }
-        .text-ritual-gold {
-            color: var(--ritual-gold);
+        .text-gray {
+            color: var(--text-color);
+        }
+        .bg-light-gray {
+            background-color: var(--light-gray);
+        }
+        .hover\:bg-accent-darker:hover {
+            background-color: #2C0303; /* Darker shade of burgundy */
+        }
+        .hover\:text-white:hover {
+            color: var(--white);
         }
 
         .font-display {
@@ -53,8 +62,8 @@
 
         .hero-pattern {
             background-image: 
-                radial-gradient(circle at 25% 25%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(212, 165, 116, 0.08) 0%, transparent 50%);
+                radial-gradient(circle at 25% 25%, rgba(64, 5, 5, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(64, 5, 5, 0.08) 0%, transparent 50%);
         }
 
         .floating-beans {
@@ -67,7 +76,7 @@
 
         .bean {
             position: absolute;
-            background: rgba(212, 165, 116, 0.1);
+            background: rgba(64, 5, 5, 0.1);
             border-radius: 50%;
             animation: float 6s ease-in-out infinite;
         }
@@ -122,10 +131,10 @@
 
         @keyframes pulse-glow {
             from {
-                box-shadow: 0 0 20px rgba(212, 165, 116, 0.3);
+                box-shadow: 0 0 20px rgba(64, 5, 5, 0.3);
             }
             to {
-                box-shadow: 0 0 40px rgba(212, 165, 116, 0.6);
+                box-shadow: 0 0 40px rgba(64, 5, 5, 0.6);
             }
         }
 
@@ -144,7 +153,7 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background: linear-gradient(90deg, var(--ritual-accent-brown), var(--ritual-gold));
+            background: var(--bg-accent);
             transform-origin: left;
             transform: scaleX(0);
             z-index: 1000;
@@ -169,28 +178,28 @@
         .stagger-4 { animation-delay: 0.4s; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-body">
+<body class="bg-light-gray text-gray font-body">
     <div class="scroll-indicator" id="scrollIndicator"></div>
 
-    <header class="bg-ritual-gradient text-ritual-light-creme p-4 fixed top-0 w-full z-50 glassmorphism">
+    <header class="bg-secondary text-white p-4 fixed top-0 w-full z-50 glassmorphism">
         <nav class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold font-display text-ritual-gold">Ritual Specialty Coffee</a>
+            <a href="#" class="text-2xl font-bold font-display text-white">Ritual Specialty Coffee</a>
             
             <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-8">
-                <li><a href="#about" class="hover:text-ritual-gold transition-all duration-300 relative group">
+                <li><a href="#about" class="hover:text-white transition-all duration-300 relative group">
                     About
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-ritual-gold transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a></li>
-                <li><a href="#product" class="hover:text-ritual-gold transition-all duration-300 relative group">
+                <li><a href="#product" class="hover:text-white transition-all duration-300 relative group">
                     Our Coffee
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-ritual-gold transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a></li>
-                <li><a href="#brewing" class="hover:text-ritual-gold transition-all duration-300 relative group">
+                <li><a href="#brewing" class="hover:text-white transition-all duration-300 relative group">
                     Brewing Tips
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-ritual-gold transition-all duration-300 group-hover:w-full"></span>
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full"></span>
                 </a></li>
-                <li><a href="#product" class="bg-ritual-accent-brown text-white px-6 py-2 rounded-full hover:bg-ritual-accent-darker transition-all duration-300 transform hover:scale-105 pulse-glow">Order Now</a></li>
+                <li><a href="#product" class="bg-accent text-white px-6 py-2 rounded-full hover:bg-accent-darker transition-all duration-300 transform hover:scale-105 pulse-glow">Order Now</a></li>
             </ul>
 
             <!-- Mobile Menu Button -->
@@ -202,7 +211,7 @@
         </nav>
 
         <!-- Mobile Menu -->
-        <div class="mobile-menu fixed top-0 right-0 w-full h-full bg-ritual-gradient z-50 md:hidden" id="mobileMenu">
+        <div class="mobile-menu fixed top-0 right-0 w-full h-full bg-secondary z-50 md:hidden" id="mobileMenu">
             <div class="flex justify-end p-4">
                 <button id="closeMobileMenu" class="text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,28 +220,28 @@
                 </button>
             </div>
             <ul class="flex flex-col items-center space-y-8 mt-16">
-                <li><a href="#about" class="text-white text-xl hover:text-ritual-gold transition-colors duration-300">About</a></li>
-                <li><a href="#product" class="text-white text-xl hover:text-ritual-gold transition-colors duration-300">Our Coffee</a></li>
-                <li><a href="#brewing" class="text-white text-xl hover:text-ritual-gold transition-colors duration-300">Brewing Tips</a></li>
-                <li><a href="#order" class="bg-ritual-accent-brown text-white px-8 py-3 rounded-full hover:bg-ritual-accent-darker transition-all duration-300 transform hover:scale-105">Order Now</a></li>
+                <li><a href="#about" class="text-white text-xl hover:text-white transition-colors duration-300">About</a></li>
+                <li><a href="#product" class="text-white text-xl hover:text-white transition-colors duration-300">Our Coffee</a></li>
+                <li><a href="#brewing" class="text-white text-xl hover:text-white transition-colors duration-300">Brewing Tips</a></li>
+                <li><a href="#order" class="bg-accent text-white px-8 py-3 rounded-full hover:bg-accent-darker transition-all duration-300 transform hover:scale-105">Order Now</a></li>
             </ul>
         </div>
     </header>
 
-    <section class="bg-ritual-gradient hero-pattern py-28 md:py-32 flex items-center min-h-screen relative overflow-hidden">
+    <section class="bg-accent hero-pattern py-28 md:py-32 flex items-center min-h-screen relative overflow-hidden">
         <div class="floating-beans">
             <div class="bean"></div>
             <div class="bean"></div>
             <div class="bean"></div>
         </div>
         <div class="container mx-auto px-4 text-center relative z-10">
-            <h1 class="text-5xl md:text-8xl font-bold text-ritual-light-creme mb-6 font-display fade-in-up">
+            <h1 class="text-5xl md:text-8xl font-bold text-white mb-6 font-display fade-in-up">
                 Ritual
-                <span class="block text-ritual-gold">Ritual Specialty Coffee</span>
+                <span class="block text-white">Ritual Specialty Coffee</span>
             </h1>
-            <p class="text-xl md:text-3xl text-black mb-10 fade-in-up stagger-1 font-light">Savor the essence of Colombia in every cup</p>
+            <p class="text-xl md:text-3xl text-white mb-10 fade-in-up stagger-1 font-light">Savor the essence of Colombia in every cup</p>
             <div class="fade-in-up stagger-2">
-                <a href="#about" class="inline-block bg-ritual-accent-brown text-white px-10 py-4 rounded-full shadow-2xl hover:bg-ritual-accent-darker transition-all duration-300 transform hover:scale-105 pulse-glow">
+                <a href="#about" class="inline-block bg-accent text-white px-10 py-4 rounded-full shadow-2xl hover:bg-accent-darker transition-all duration-300 transform hover:scale-105 pulse-glow">
                     Discover Our Story
                 </a>
             </div>
@@ -241,37 +250,25 @@
 
     <section id="about" class="container mx-auto px-4 py-20 mb-12">
         <div class="bg-white rounded-2xl shadow-2xl -mt-20 relative z-10 overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-ritual-accent-brown to-transparent opacity-10 rounded-full -translate-y-32 translate-x-32"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-accent opacity-10 rounded-full -translate-y-32 translate-x-32"></div>
             <div class="flex flex-col lg:flex-row items-center gap-12 p-8 lg:p-16 relative">
                 <div class="lg:w-1/2">
                     <div class="relative group">
-                        <div class="absolute inset-0 bg-gradient-to-r from-ritual-accent-brown to-ritual-gold rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
+                        <div class="absolute inset-0 bg-accent rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
                         <img src="coffeecup.jpg" alt="Ritual Coffee Cup" class="relative w-full h-auto rounded-2xl shadow-xl object-cover max-h-96 group-hover:scale-105 transition-transform duration-300">
                     </div>
                 </div>
                 <div class="lg:w-1/2 text-center lg:text-left">
-                    <h2 class="text-5xl font-bold text-gray-900 mb-8 font-display text-ritual-gold">About Ritual</h2>
-                    <p class="text-ritual-gray leading-relaxed mb-6 text-lg">
+                    <h2 class="text-5xl font-bold text-gray mb-8 font-display text-accent">About Ritual</h2>
+                    <p class="text-gray leading-relaxed mb-6 text-lg">
                         At Ritual, we believe every morning deserves to start with something extraordinary. That's why we offer a premium specialty coffee crafted for those who appreciate quality in every cup.
                     </p>
-                    <p class="text-ritual-gray leading-relaxed mb-8 text-lg">
+                    <p class="text-gray leading-relaxed mb-8 text-lg">
                         Our coffee is of the exquisite Castillo variety, grown in the nutrient-rich soils of Valle del Cauca, Colombia—one of the world's most celebrated coffee regions. Cultivated at elevations between 1,550 and 1,900 meters, these high-altitude beans develop complex, vibrant notes that reflect their origin.
                     </p>
-                    
-                   <!-- <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="bg-gradient-to-br from-ritual-accent-brown to-ritual-gold p-4 rounded-xl text-gray-900 text-center">
-                            <div class="text-2xl font-bold">87</div>
-                            <div class="text-sm">SCA Rating</div>
-                        </div>
-                        <div class="bg-gradient-to-br from-ritual-gold to-ritual-accent-brown p-4 rounded-xl text-gray-900 text-center">
-                            <div class="text-2xl font-bold">1,550-1,900m</div>
-                            <div class="text-sm">Altitude</div>
-                        </div>
-                    </div>-->
-
-                    <div class="bg-gradient-to-r from-ritual-dark-brown to-ritual-medium-brown p-6 rounded-xl shadow-lg mb-6">
-                        <h3 class="text-xl font-semibold text-ritual-gold mb-3">What does an SCA score mean?</h3>
-                        <p class="text-gray-900 text-sm leading-relaxed">
+                    <div class="bg-accent p-6 rounded-xl shadow-lg mb-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">What does an SCA score mean?</h3>
+                        <p class="text-white text-sm leading-relaxed">
                             The Specialty Coffee Association (SCA) scores coffee on a scale of 0–100. Only coffees that score 80 and above earn the "specialty" label. At 87, Ritual ranks among the top-tier beans globally—offering a refined flavor profile with clarity, sweetness, and balance that connoisseurs expect from exceptional coffee.
                         </p>
                     </div>
@@ -282,83 +279,78 @@
 
     <section id="product" class="container mx-auto px-4 py-20">
         <div class="text-center mb-16">
-            <h2 class="text-5xl font-bold text-gray-900 font-display mb-6">Our Coffee</h2>
-            <p class="text-ritual-gray text-xl max-w-3xl mx-auto">Ritual is available in  ground form in 340g (12 oz) bags, sealed for freshness and bursting with vibrant Colombian flavor.</p>
+            <h2 class="text-5xl font-bold text-gray font-display mb-6">Our Coffee</h2>
+            <p class="text-gray text-xl max-w-3xl mx-auto">Ritual is available in ground form in 340g (12 oz) bags, sealed for freshness and bursting with vibrant Colombian flavor.</p>
         </div>
         
         <div class="flex justify-center">
             <div class="bg-white rounded-3xl shadow-2xl p-8 max-w-md card-hover relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-ritual-accent-brown to-ritual-gold"></div>
+                <div class="absolute top-0 left-0 w-full h-2 bg-accent"></div>
                 
                 <div class="relative mb-8">
-                    <div class="absolute inset-0 bg-gradient-to-r from-ritual-accent-brown to-ritual-gold rounded-2xl transform -rotate-2"></div>
+                    <div class="absolute inset-0 bg-accent rounded-2xl transform -rotate-2"></div>
                     <img src="ritualcoffeebag.jpeg" alt="Ritual Coffee Bag" class="relative w-full h-auto rounded-2xl shadow-lg">
                 </div>
 
                 <div class="text-center mb-6">
-                    <h3 class="text-3xl font-bold text-ritual-gold mb-3 font-display">340g Bag (12 oz) SCA 87</h3>
-                    <p class="text-ritual-gray mb-4 text-lg">Perfect for 25–30 cups of exceptional coffee</p>
-                    <div class="inline-block bg-ritual-accent-brown text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <h3 class="text-3xl font-bold text-accent mb-3 font-display">340g Bag (12 oz) SCA 87</h3>
+                    <p class="text-gray mb-4 text-lg">Perfect for 25–30 cups of exceptional coffee</p>
+                    <div class="inline-block bg-accent text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Ground Coffee
                     </div>
                 </div>
 
                 <div class="mb-8">
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 text-center">Tasting Notes</h4>
+                    <h4 class="text-xl font-bold text-gray mb-4 text-center">Tasting Notes</h4>
                     <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-gradient-to-br from-red-100 to-red-200 p-3 rounded-lg text-center">
+                        <div class="bg-light-gray p-3 rounded-lg text-center">
                             <div class="text-2xl mb-1">🍓</div>
                             <div class="text-sm font-medium">Red Fruits</div>
                         </div>
-                        <div class="bg-gradient-to-br from-amber-100 to-amber-200 p-3 rounded-lg text-center">
+                        <div class="bg-light-gray p-3 rounded-lg text-center">
                             <div class="text-2xl mb-1">🍫</div>
                             <div class="text-sm font-medium">Chocolate</div>
                         </div>
-                        <div class="bg-gradient-to-br from-purple-100 to-purple-200 p-3 rounded-lg text-center">
+                        <div class="bg-light-gray p-3 rounded-lg text-center">
                             <div class="text-2xl mb-1">🫐</div>
                             <div class="text-sm font-medium">Blueberries</div>
                         </div>
-                        <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 p-3 rounded-lg text-center">
+                        <div class="bg-light-gray p-3 rounded-lg text-center">
                             <div class="text-2xl mb-1">🌴</div>
                             <div class="text-sm font-medium">Tropical</div>
                         </div>
                     </div>
-                    <div class="mt-4 p-4 bg-gray-50 rounded-lg">
-                        <p class="text-sm text-ritual-gray text-center">
+                    <div class="mt-4 p-4 bg-light-gray rounded-lg">
+                        <p class="text-sm text-gray text-center">
                             Silky and creamy body with a fruity finish and subtle wine-like notes. Balanced acidity with a prolonged and juicy aftertaste.
                         </p>
                     </div>
                 </div>
 
                 <div class="text-center">
-                    <div class="text-4xl font-bold text-ritual-accent-brown mb-6">$20 USD</div>
-                    <a href="#order" class="block bg-gradient-to-r from-ritual-accent-brown to-ritual-gold text-black px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 pulse-glow font-semibold">
-                       <script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1Rj50ED76isZx4fe5XVQyQQP"
-  publishable-key="pk_live_51Rj4a5D76isZx4feXi4Kr5iCVAbBTqcstXmYI7V507YXaFCUiodLpZ3UF2PoNvdzQ4XhaZ3JXI27x9LjpkWEJUjA0021IAybpG"
->
-</stripe-buy-button>
+                    <div class="text-4xl font-bold text-accent mb-6">$20 USD</div>
+                    <a href="#order" class="block bg-accent text-white px-8 py-4 rounded-full shadow-lg hover:bg-accent-darker transition-all duration-300 transform hover:scale-105 pulse-glow font-semibold">
+                        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                        <stripe-buy-button
+                            buy-button-id="buy_btn_1Rj50ED76isZx4fe5XVQyQQP"
+                            publishable-key="pk_live_51Rj4a5D76isZx4feXi4Kr5iCVAbBTqcstXmYI7V507YXaFCUiodLpZ3UF2PoNvdzQ4XhaZ3JXI27x9LjpkWEJUjA0021IAybpG"
+                        >
+                        </stripe-buy-button>
                     </a>
-                    
-                  
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="brewing" class="bg-gradient-to-br from-ritual-light-creme to-white py-20">
+    <section id="brewing" class="bg-light-gray py-20">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="text-5xl font-bold text-gray-900 mb-8 font-display">Brewing Tips</h2>
+            <h2 class="text-5xl font-bold text-gray mb-8 font-display">Brewing Tips</h2>
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white p-8 rounded-2xl shadow-xl mb-8">
                     <div class="text-6xl mb-4">☕</div>
-                    <h3 class="text-2xl font-bold text-ritual-gold mb-4">Perfect Ratio</h3>
-                    <p class="text-ritual-gray text-lg leading-relaxed">
-                        For the perfect cup, we recommend using <span class="font-bold text-ritual-accent-brown">15g of coffee per 8oz of water</span>. Adjust based on your preferred strength. Use filtered water and enjoy fresh for best results!
+                    <h3 class="text-2xl font-bold text-accent mb-4">Perfect Ratio</h3>
+                    <p class="text-gray text-lg leading-relaxed">
+                        For the perfect cup, we recommend using <span class="font-bold text-accent">15g of coffee per 8oz of water</span>. Adjust based on your preferred strength. Use filtered water and enjoy fresh for best results!
                     </p>
                 </div>
                 
@@ -366,58 +358,31 @@
                     <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
                         <div class="text-4xl mb-4">🌡️</div>
                         <h4 class="font-bold text-lg mb-2">Temperature</h4>
-                        <p class="text-sm text-ritual-gray">195-205°F (90-96°C)</p>
+                        <p class="text-sm text-gray">195-205°F (90-96°C)</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
                         <div class="text-4xl mb-4">💧</div>
                         <h4 class="font-bold text-lg mb-2">Water Quality</h4>
-                        <p class="text-sm text-ritual-gray">Always use filtered water</p>
+                        <p class="text-sm text-gray">Always use filtered water</p>
                     </div>
                     <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
                         <div class="text-4xl mb-4">⏱️</div>
                         <h4 class="font-bold text-lg mb-2">Brew Time</h4>
-                        <p class="text-sm text-ritual-gray">4-6 minutes for optimal extraction</p>
+                        <p class="text-sm text-gray">4-6 minutes for optimal extraction</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--<section id="order" class="bg-ritual-gradient py-20 relative overflow-hidden">
-        <div class="floating-beans">
-            <div class="bean"></div>
-            <div class="bean"></div>
-            <div class="bean"></div>
-        </div>
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <h2 class="text-5xl font-bold text-ritual-light-creme mb-8 font-display">Ready to Order?</h2>
-            <p class="text-white mb-12 max-w-2xl mx-auto text-lg">
-                Experience Ritual Specialty Coffee today. Choose your preferred ordering method below for quick and convenient service.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-8 max-w-2xl mx-auto">
-                <a href="https://forms.gle/Stya9oefWogZd6LLA" target="_blank" class="flex-1 bg-blue-600 text-white px-8 py-6 rounded-2xl shadow-2xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 card-hover">
-                    <div class="text-3xl mb-2">📝</div>
-                    <div class="font-semibold text-lg mb-2">Google Form</div>
-                    <div class="text-sm opacity-90">Quick & Easy</div>
-                </a>
-                <a href="https://wa.me/2408798878" target="_blank" class="flex-1 bg-green-600 text-white px-8 py-6 rounded-2xl shadow-2xl hover:bg-green-700 transition-all duration-300 transform hover:scale-105 card-hover">
-                    <div class="text-3xl mb-2">💬</div>
-                    <div class="font-semibold text-lg mb-2">WhatsApp</div>
-                    <div class="text-sm opacity-90">Personal Service</div>
-                </a>
-            </div>
-        </div>
-    </section>-->
-    
-
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-secondary text-white py-12">
         <div class="container mx-auto px-4 text-center">
             <div class="mb-6">
-                <h3 class="text-2xl font-bold font-display text-ritual-gold">Ritual Specialty Coffee</h3>
+                <h3 class="text-2xl font-bold font-display text-white">Ritual Specialty Coffee</h3>
                 <p class="text-gray-400 mt-2">Premium Colombian Coffee, Delivered Fresh</p>
             </div>
             <div class="border-t border-gray-700 pt-6">
-                <p class="text-gray-400 text-sm">&copy; 2025 Ritual Specialty Coffee. All rights reserved.</p>
+                <p class="text-gray-400 text-sm">© 2025 Ritual Specialty Coffee. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -436,14 +401,12 @@
             mobileMenu.classList.remove('open');
         });
 
-        // Close mobile menu when clicking on links
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('open');
             });
         });
 
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -457,13 +420,11 @@
             });
         });
 
-        // Scroll progress indicator
         window.addEventListener('scroll', () => {
             const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             document.getElementById('scrollIndicator').style.transform = `scaleX(${scrolled / 100})`;
         });
 
-        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
